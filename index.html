@@ -440,6 +440,21 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-mailbox">
+        <h2 class="mailbox-title">Підпишіться на розсилку</h2>
+        <label class="mailbox-label">
+          <input class="mailbox-input" type="email" name="email" placeholder=" E-mail"/>
+        </label>
+        <button class="mailbox-button" type="submit">
+          Підписатися
+          <svg class="mailbox-icon" width="22px" height="22px" >
+            <use href="./images/icons.svg#icon-icon-send">
+            </use>
+          </svg>
+        </button>
+       
+        </div>
       </div>
       
         
@@ -511,19 +526,24 @@
             name="person-comment"
             placeholder="Введіть коментар">
           </textarea>
-          <label class="checkbox-label " for="terms-checkbox" >
-            <input class="checkbox-input visually-hidden" id="terms-checkbox" type="checkbox" name="terms-checkbox"/>
+          
+            <input
+             class="checkbox-input visually-hidden" 
+             id="terms-checkbox" 
+             type="checkbox" 
+             name="terms-checkbox"
+             />
+             <label class="checkbox-label " for="terms-checkbox" >
             Погоджуюся з розсилкою та приймаю  
             <a href="#" style="text-decoration:underline">Умови договору</a>
-          </label>
 
-          <button class="modal-button" type="sumbit">Відправити</button>
+            
 
-  
+        </label>
+        <button class="modal-button" type="sumbit">Відправити</button> 
         </form>
       </div>
      </div>
-
       <script src="./modal/modal.js"></script>
 
   </body>

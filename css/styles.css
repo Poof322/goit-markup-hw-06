@@ -1,22 +1,28 @@
 * {
   list-style-type: none;
 }
+
 * {
   text-decoration: none;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 h1 {
   margin: 0;
 }
+
 h2 {
   margin: 0;
 }
+
 h3 {
   margin: 0;
 }
+
 h4 {
   margin: 0;
 }
@@ -583,6 +589,59 @@ img {
   fill: #ffffff;
 }
 
+.mailbox-title{
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+
+.mailbox-input{
+  width:358px ;
+  height: 50px;
+  margin-top: 20px ;
+  padding: 15px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.mailbox-button{
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background-color: #2196f3;
+  border-color: #2196f3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mailbox-icon{
+  fill: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*PORTFOLIO CSS*/
 
 .section-portfolio {
@@ -714,6 +773,11 @@ img {
   color: #ffffff;
 }
 
+
+
+
+
+
 /*Modal Window*/
 .backdrop {
   position: fixed;
@@ -726,6 +790,7 @@ img {
   transition: opacity 250ms, visibility 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -758,13 +823,13 @@ img {
   right: 17px;
   width: 30px;
   height: 30px;
-  align-items: center;
-  justify-content: center;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
   fill: #000000;
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover {
@@ -779,10 +844,15 @@ img {
   color: #757575;
   margin-bottom: 8px;
   margin-top: 10px;
+  margin-left: 40px;
 }
 
 .form-control {
   position: relative;
+  width: 100%;
+  max-width: 448px;
+  height: 40px;
+  margin: 0 auto;
 }
 
 .form-input {
@@ -791,10 +861,10 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  cursor: pointer;
 }
 
 .form-input:focus {
-  color: #2196f3;
   border-color: #2196f3;
 }
 
@@ -811,47 +881,63 @@ img {
 
 .form-textarea {
   width: 100%;
+  max-width: 448px;
   height: 120px;
   padding: 12px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
 }
 
-.checkbox-input{
+
+
+/*chekbox*/
+
+.checkbox-input {
   appearance: none;
 }
 
-.checkbox-label{
-position: relative;
-padding-left: 28px;
+.checkbox-label {
+  position: relative;
+  padding-left: 28px;
+  margin-left: 40px;
+  cursor: pointer;
 }
 
-.checkbox-label::before{
-position: absolute;
-top: 0;
-left: 0;
-width: 16px;
-height: 15px;
-border: 1px solid #afb1b8;
-border-radius: 2px;
-content: '';
-}
-
-.checkbox-label::after{
+.checkbox-label::before {
   position: absolute;
   top: 0;
   left: 0;
   width: 16px;
   height: 15px;
-  border: 1px solid #afb1b8;
+  border: 1px solid #212121;
   border-radius: 2px;
-  background-image: url(../images/icons.svg#icon-galochka);
+  content: "";
+}
+
+.checkbox-label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  border: 1px solid #212121;
+  border-radius: 2px;
+  background-image: url(../images/SVG/Vector.svg#icon-Vector-2);
+  background-repeat: no-repeat;
   background-color: #2196f3;
-  content: '';
-  }
+  opacity: 0;
+  content: "";
+}
 
-
-
+.checkbox-input:checked + .checkbox-label::after {
+  opacity: 1;
+  transition: opacity 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .modal-button {
   display: block;
@@ -859,14 +945,23 @@ content: '';
   text-align: center;
   width: 200px;
   height: 50px;
+  margin: 30px auto 40px;
   text-align: center;
   color: #eeeeee;
   background-color: #2196f3;
   border: 1px solid #2196f3;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
+.modal-button:hover{
+  background-color: #188CE8;
+  transition: background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.visually-hidden{
+.visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -874,12 +969,7 @@ content: '';
   overflow: hidden;
   border: 0;
   padding: 0%;
-  clip: rect(0 0 0 0 );
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
 }
-
-
-
-
-
